@@ -12,7 +12,7 @@ select * from ContactTable;
 select * from ContactTable where Active_flag = 1;
 
 -- Deactivate contacts who are opted out 
-delete from ContactTable where opt_out=0;
+update ContactTable set Active_flag=0 where Active_flag=1;
 
 -- Delete all the contacts who have the company name as ‘ABC’
 delete from ContactTable where company="ABC";
